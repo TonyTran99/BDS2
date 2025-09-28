@@ -49,7 +49,7 @@
             font-size: 2.8em;
             line-height: 1.2;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-            text-align: center; /* Đảm bảo căn giữa */
+            text-align: center;
         }
 
         h2 {
@@ -119,7 +119,7 @@
         .hero-section {
             background: linear-gradient(rgba(0, 40, 80, 0.75), rgba(0, 40, 80, 0.75)), url('https://via.placeholder.com/1500x600/004d99/ffffff?text=Chuyen+Gia+Dat+Dai') no-repeat center center/cover;
             color: #fff;
-            padding: 100px 0;
+            padding: 100px 0 60px; /* Giảm padding dưới để gần section tiếp theo */
             text-align: center;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
@@ -128,11 +128,39 @@
             font-size: 1.6em;
             font-weight: 600;
             margin-bottom: 30px;
-            color: #ffe082; /* Vàng nhạt nổi bật */
+            color: #ffe082;
         }
 
         .cta-header {
             margin-top: 50px;
+        }
+
+        /* UY TÍN Section */
+        .section-intro {
+            background-color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+        .intro-box {
+            background-color: var(--bg-light);
+            padding: 30px;
+            border-radius: 10px;
+            border-top: 4px solid var(--accent-color);
+        }
+        .intro-box h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+        .statistics {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        .statistics span {
+            color: var(--primary-color);
         }
 
         /* Reason Section (4 Cards) */
@@ -230,6 +258,29 @@
             white-space: pre-wrap;
         }
         
+        /* Testimonial Section */
+        .section-testimonials {
+            background-color: var(--bg-light);
+            padding: 50px 0;
+        }
+        .testimonial-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            border-left: 5px solid var(--accent-color);
+        }
+        .testimonial-item p {
+            font-style: italic;
+        }
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: 15px;
+            display: block;
+        }
+        
         /* Final CTA Section */
         .section-cta {
             text-align: center;
@@ -250,11 +301,25 @@
         }
         
         .section-cta h3 {
-             color: #ffd700; /* Vàng đồng */
+             color: #ffd700;
              font-size: 2.2em;
              margin-bottom: 40px;
         }
         
+        .cta-benefits {
+            text-align: left;
+            margin: 20px auto 40px;
+            max-width: 600px;
+        }
+        .cta-benefits li {
+            font-size: 1.1em;
+            list-style: none;
+            margin-bottom: 10px;
+        }
+        .cta-benefits li i {
+            color: #ffc107;
+        }
+
         .contact-info {
             margin-top: 30px;
             display: flex;
@@ -301,31 +366,17 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero-section h1 {
-                font-size: 2.5em;
+                font-size: 2.2em;
             }
             .hero-section .subtitle {
-                font-size: 1.3em;
+                font-size: 1.2em;
             }
             h2 {
                 font-size: 1.8em;
             }
-            .section-cta h2 {
-                font-size: 2.2em;
-            }
-            .section-cta h3 {
-                font-size: 1.8em;
-            }
-            .contact-info {
+            .statistics {
                 flex-direction: column;
-                gap: 20px;
-            }
-        }
-        @media (max-width: 480px) {
-            .hero-section {
-                padding: 60px 0;
-            }
-            h1 {
-                font-size: 2em;
+                gap: 15px;
             }
         }
     </style>
@@ -335,42 +386,61 @@
         <div class="container">
             <h1>HOÀN THIỆN SỔ ĐỎ CHO ĐẤT KHÔNG GIẤY TỜ: HƯỚNG DẪN CHI TIẾT TỪ A-Z</h1>
             <p class="subtitle">SỔ ĐỎ CHÍNH CHỦ TRONG TẦM TAY: Hướng Dẫn Toàn Diện Cho Đất Không Giấy Tờ!</p>
-            <p>Bạn đang sở hữu mảnh đất không có giấy tờ hợp pháp và băn khoăn về quy trình cấp Sổ đỏ? Đừng lo lắng! Với những cập nhật mới nhất từ Luật Đất đai 2024 và Nghị định 103/2024/NĐ-CP, việc hợp thức hóa quyền sử dụng đất của bạn giờ đây đã rõ ràng hơn bao giờ hết.</p>
+            <p>Việc hợp thức hóa đất đai không chỉ giúp tài sản gia tăng giá trị mà còn tránh được rủi ro bị thu hồi hoặc phạt hành chính. Đừng để nỗi lo pháp lý cản trở bạn.</p>
             <div class="cta-header">
-                <a href="#contact" class="btn btn-primary btn-lg">LIÊN HỆ TƯ VẤN MIỄN PHÍ NGAY!</a>
+                <a href="#contact" class="btn btn-primary btn-lg">TƯ VẤN XÁC ĐỊNH ĐIỀU KIỆN MIỄN PHÍ</a>
             </div>
         </div>
     </header>
 
-    <main class="container">
-        <section class="section-reasons">
-            <h2>Lý do bạn nên sở hữu Sổ đỏ cho đất không giấy tờ:</h2>
-            <div class="reason-list">
-                <div class="reason-item">
-                    <i class="fas fa-gavel"></i>
-                    <h3>An tâm pháp lý</h3>
-                    <p>Đảm bảo quyền sử dụng hợp pháp, tránh tranh chấp.</p>
-                </div>
-                <div class="reason-item">
-                    <i class="fas fa-hand-holding-usd"></i>
-                    <h3>Giá trị tài sản</h3>
-                    <p>Nâng cao giá trị đất, dễ dàng giao dịch.</p>
-                </div>
-                <div class="reason-item">
-                    <i class="fas fa-university"></i>
-                    <h3>Thế chấp, vay vốn</h3>
-                    <p>Sử dụng Sổ đỏ làm tài sản đảm bảo vay vốn ngân hàng.</p>
-                </div>
-                <div class="reason-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Bảo vệ quyền lợi</h3>
-                    <p>Được bồi thường thỏa đáng khi nhà nước thu hồi đất.</p>
+    <main>
+        <!-- NEW: Giới thiệu và Uy tín -->
+        <section class="section-intro">
+            <div class="container">
+                <div class="intro-box">
+                    <h3>CHUYÊN GIA PHÁP LÝ ĐẤT ĐAI HÀNG ĐẦU</h3>
+                    <p>Chúng tôi là đội ngũ luật sư và chuyên viên tư vấn chuyên sâu về các thủ tục cấp Giấy chứng nhận quyền sử dụng đất theo Luật Đất đai mới nhất. Chúng tôi cam kết mang đến sự rõ ràng và an tâm tuyệt đối cho khách hàng.</p>
+                    <div class="statistics">
+                        <p><i class="fas fa-check-double"></i> Đã xử lý thành công: <span>450+ hồ sơ</span></p>
+                        <p><i class="fas fa-calendar-check"></i> Kinh nghiệm pháp lý: <span>10+ năm</span></p>
+                        <p><i class="fas fa-map-marker-alt"></i> Khu vực hỗ trợ: <span>Toàn quốc</span></p>
+                    </div>
                 </div>
             </div>
-            <p class="update-info"><strong>Cập nhật mới nhất:</strong> Áp dụng theo Điều 138 Luật Đất đai 2024 và Điều 10 Nghị định 103/2024/NĐ-CP.</p>
         </section>
 
-        <section class="section-conditions">
+        <!-- Lợi ích khi có Sổ đỏ -->
+        <section class="section-reasons">
+            <div class="container">
+                <h2>Lý do bạn nên sở hữu Sổ đỏ cho đất không giấy tờ:</h2>
+                <div class="reason-list">
+                    <div class="reason-item">
+                        <i class="fas fa-gavel"></i>
+                        <h3>An tâm pháp lý</h3>
+                        <p>Đảm bảo quyền sử dụng hợp pháp, tránh tranh chấp và mọi rủi ro về kiện tụng.</p>
+                    </div>
+                    <div class="reason-item">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h3>Giá trị tài sản</h3>
+                        <p>Tăng giá trị tài sản gấp nhiều lần, dễ dàng thực hiện giao dịch mua bán, thừa kế.</p>
+                    </div>
+                    <div class="reason-item">
+                        <i class="fas fa-university"></i>
+                        <h3>Thế chấp, vay vốn</h3>
+                        <p>Sổ đỏ là tài sản đảm bảo tốt nhất để vay vốn, đầu tư kinh doanh.</p>
+                    </div>
+                    <div class="reason-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Bảo vệ quyền lợi</h3>
+                        <p>Được bồi thường thỏa đáng theo quy định của Nhà nước khi bị thu hồi đất.</p>
+                    </div>
+                </div>
+                <p class="update-info"><strong>Cập nhật mới nhất:</strong> Áp dụng theo Điều 138 Luật Đất đai 2024 và Điều 10 Nghị định 103/2024/NĐ-CP.</p>
+            </div>
+        </section>
+
+        <!-- Điều kiện cấp Sổ đỏ -->
+        <section class="section-conditions container">
             <h2>I. BẠN CÓ ĐỦ ĐIỀU KIỆN CẤP SỔ ĐỎ KHÔNG? (ĐIỀU 138 LĐĐ 2024)</h2>
             <p>Cá nhân, hộ gia đình đang sử dụng đất không có bất kỳ giấy tờ nào vẫn có thể được cấp Giấy chứng nhận quyền sử dụng đất (Sổ đỏ) nếu đáp ứng đủ 04 tiêu chí sau:</p>
             <ul>
@@ -382,7 +452,8 @@
             <p class="note"><em>Bạn không chắc chắn về điều kiện? Hãy liên hệ với chúng tôi để được tư vấn miễn phí!</em></p>
         </section>
 
-        <section class="section-process">
+        <!-- Quy trình 4 bước -->
+        <section class="section-process container">
             <h2>II. QUY TRÌNH 4 BƯỚC THỰC HIỆN THỦ TỤC</h2>
             <p>Thủ tục này được thực hiện tại **Văn phòng Đăng ký đất đai cấp huyện** hoặc **Bộ phận Một cửa** tại địa phương có đất.</p>
             <div class="table-responsive">
@@ -396,51 +467,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>**Nộp Hồ sơ**</td>
-                            <td>Nộp 01 bộ hồ sơ đề nghị cấp Sổ đỏ. Cơ quan tiếp nhận kiểm tra tính hợp lệ và hẹn ngày trả kết quả.</td>
-                            <td>Văn phòng Đăng ký đất đai</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="process-arrow" style="text-align: center; color: var(--accent-color); font-weight: bold;">
-                                &darr; &darr; &darr;
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>**Xác minh & Công khai**</td>
-                            <td>Đo đạc, lập bản đồ địa chính, xác minh nguồn gốc và hiện trạng sử dụng đất. Niêm yết công khai kết quả tại trụ sở UBND cấp xã và khu dân cư trong 15 ngày để tiếp nhận ý kiến.</td>
-                            <td>Văn phòng Đăng ký đất đai, UBND cấp xã</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="process-arrow" style="text-align: center; color: var(--accent-color); font-weight: bold;">
-                                &darr; &darr; &darr;
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>**Xác định Nghĩa vụ Tài chính**</td>
-                            <td>Văn phòng Đăng ký đất đai gửi hồ sơ sang Cơ quan Thuế. Cơ quan Thuế tính toán Tiền sử dụng đất theo Điều 10 Nghị định 103/2024/NĐ-CP, Lệ phí trước bạ và gửi **Thông báo nộp tiền**.</td>
-                            <td>Cơ quan Thuế</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="process-arrow" style="text-align: center; color: var(--accent-color); font-weight: bold;">
-                                &darr; &darr; &darr;
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>**Cấp Giấy chứng nhận**</td>
-                            <td>Người dân **hoàn thành nghĩa vụ tài chính** theo Thông báo. Sau khi có xác nhận nộp tiền, cơ quan có thẩm quyền ký cấp và Văn phòng Đăng ký đất đai sẽ trao Giấy chứng nhận.</td>
-                            <td>UBND cấp huyện/tỉnh, Văn phòng Đăng ký đất đai</td>
-                        </tr>
+                        <tr><td>1</td><td>**Nộp Hồ sơ**</td><td>Nộp 01 bộ hồ sơ đề nghị cấp Sổ đỏ. Cơ quan tiếp nhận kiểm tra tính hợp lệ và hẹn ngày trả kết quả.</td><td>Văn phòng Đăng ký đất đai</td></tr>
+                        <tr><td colspan="4" style="text-align: center; color: var(--accent-color); font-weight: bold;">&darr; &darr; &darr;</td></tr>
+                        <tr><td>2</td><td>**Xác minh & Công khai**</td><td>Đo đạc, lập bản đồ địa chính, xác minh nguồn gốc và hiện trạng sử dụng đất. Niêm yết công khai kết quả tại trụ sở UBND cấp xã và khu dân cư trong 15 ngày để tiếp nhận ý kiến.</td><td>Văn phòng Đăng ký đất đai, UBND cấp xã</td></tr>
+                        <tr><td colspan="4" style="text-align: center; color: var(--accent-color); font-weight: bold;">&darr; &darr; &darr;</td></tr>
+                        <tr><td>3</td><td>**Xác định Nghĩa vụ Tài chính**</td><td>Văn phòng Đăng ký đất đai gửi hồ sơ sang Cơ quan Thuế. Cơ quan Thuế tính toán Tiền sử dụng đất theo Điều 10 Nghị định 103/2024/NĐ-CP, Lệ phí trước bạ và gửi **Thông báo nộp tiền**.</td><td>Cơ quan Thuế</td></tr>
+                        <tr><td colspan="4" style="text-align: center; color: var(--accent-color); font-weight: bold;">&darr; &darr; &darr;</td></tr>
+                        <tr><td>4</td><td>**Cấp Giấy chứng nhận**</td><td>Người dân **hoàn thành nghĩa vụ tài chính** theo Thông báo. Sau khi có xác nhận nộp tiền, cơ quan có thẩm quyền ký cấp và Văn phòng Đăng ký đất đai sẽ trao Giấy chứng nhận.</td><td>UBND cấp huyện/tỉnh, Văn phòng Đăng ký đất đai</td></tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
-        <section class="section-documents">
+        <!-- Hồ sơ chuẩn bị -->
+        <section class="section-documents container">
             <h2>III. HỒ SƠ PHẢI CHUẨN BỊ (01 BỘ)</h2>
             <p>Để nộp hồ sơ hợp lệ, bạn cần chuẩn bị đầy đủ các giấy tờ sau:</p>
             <ol>
@@ -455,16 +495,18 @@
                     </ul>
                 </li>
             </ol>
+            <p class="note"><em>Việc thu thập và xác nhận giấy tờ chứng minh nguồn gốc là bước khó khăn nhất. Chúng tôi hỗ trợ chuẩn bị hồ sơ 100% hợp lệ ngay từ lần nộp đầu tiên.</em></p>
         </section>
 
-        <section class="section-fee-calculation">
+        <!-- Bảng tính phí -->
+        <section class="section-fee-calculation container">
             <h2>IV. BẢNG TÍNH TIỀN SỬ DỤNG ĐẤT CHI TIẾT (ĐIỀU 10 NĐ 103)</h2>
             <p>Tiền sử dụng đất được tính bằng tỷ lệ phần trăm (%) nhân với **Giá đất quy định tại Bảng giá đất** của UBND cấp tỉnh.</p>
             <div class="formula">
                 <strong>Công thức chung tính Tiền sử dụng đất:</strong>
                 <span class="formula-line">Tiền sử dụng đất = Diện tích phải nộp tiền</span>
                 <span class="formula-line"> &times; Giá đất tại Bảng giá đất </span>
-                <span class="formula-line"> &times; Tỷ lệ % quy định </span>
+                <span class="formula-line"> &times; Tỷ lệ phần trăm (%) quy định </span>
             </div>
             
             <div class="table-responsive">
@@ -480,7 +522,7 @@
                     <tbody>
                         <tr><td>Trước 18/12/1980</td><td>Đất ở: Phần **vượt hạn mức**</td><td>20%</td><td>Phần trong hạn mức được **miễn** (0%).</td></tr>
                         <tr><td></td><td>Đất nông nghiệp chuyển sang Phi nông nghiệp</td><td>30%</td><td></td></tr>
-                        <tr><td>18/12/1980 – 15/10/1993</td><td>Đất ở: Phần **vượt hạn mức**</td><td>40%</td><td>Phần trong hạn mức sẽ áp dụng **50% Giá đất CỤ THỂ** (không phải Bảng giá đất).</td></tr>
+                        <tr><td>18/12/1980 – 15/10/1993</td><td>Đất ở: Phần **vượt hạn mức**</td><td>40%</td><td>Phần trong hạn mức áp dụng 50% Giá đất CỤ THỂ.</td></tr>
                         <tr><td></td><td>Đất nông nghiệp chuyển sang Phi nông nghiệp</td><td>50%</td><td></td></tr>
                         <tr><td>15/10/1993 – 01/7/2004</td><td>Đất ở: Phần **trong hạn mức**</td><td>20%</td><td></td></tr>
                         <tr><td></td><td>Đất ở: Phần **vượt hạn mức**</td><td>50%</td><td></td></tr>
@@ -495,16 +537,36 @@
             <h3>Các Nghĩa Vụ Tài Chính Khác Bắt Buộc</h3>
             <p>Bạn cần nộp thêm 02 khoản sau khi có Thông báo thuế:</p>
             <ul>
-                <li><i class="fas fa-hand-holding-usd"></i> **Lệ phí trước bạ:** **0,5%** trên giá trị đất.</li>
+                <li><i class="fas fa-hand-holding-usd"></i> **Lệ phí trước bạ:** 0,5% trên giá trị đất.</li>
                 <li><i class="fas fa-file-invoice-dollar"></i> **Lệ phí cấp Giấy chứng nhận:** Mức thu do Hội đồng nhân dân cấp tỉnh quy định.</li>
             </ul>
         </section>
 
+        <!-- NEW: Case Study / Lời chứng thực -->
+        <section class="section-testimonials">
+            <div class="container">
+                <h2>CÂU CHUYỆN THÀNH CÔNG THỰC TẾ</h2>
+                <div class="testimonial-item">
+                    <p>"Sau nhiều năm loay hoay với mảnh đất không giấy tờ, tôi tưởng chừng phải bỏ cuộc vì thủ tục quá rối rắm. Nhờ đội ngũ tư vấn, tôi đã được hướng dẫn chi tiết từng bước, hoàn thành nghĩa vụ tài chính và nhận Sổ đỏ chỉ trong 3 tháng. Giờ đây tôi hoàn toàn an tâm!"</p>
+                    <span class="testimonial-author"><i class="fas fa-user-check"></i> Ông Trần Văn A, Quận 9, TP. HCM (Đất sử dụng từ 1990)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kêu gọi hành động cuối cùng -->
         <section class="section-cta" id="contact">
             <h2>ĐỪNG ĐỂ ĐẤT KHÔNG GIẤY TỜ LÀM BẠN LO LẮNG!</h2>
-            <p>Hãy để các chuyên gia của chúng tôi hỗ trợ bạn từ A-Z để quá trình cấp Sổ đỏ diễn ra nhanh chóng và thuận lợi nhất.</p>
-            <h3>LIÊN HỆ TƯ VẤN MIỄN PHÍ NGAY HÔM NAY!</h3>
-            <a href="tel:[Số điện thoại của bạn]" class="btn btn-lg"><i class="fas fa-phone-alt"></i> GỌI NGAY CHO CHÚNG TÔI</a>
+            <p>Chúng tôi sẽ giúp bạn giải quyết rào cản pháp lý và chi phí phức tạp nhất.</p>
+            <h3>Đăng ký ngay để nhận Gói Tư vấn & Rà soát Hồ sơ MIỄN PHÍ:</h3>
+            
+            <ul class="cta-benefits">
+                <li><i class="fas fa-star"></i> **Xác định chính xác** đất bạn có đủ điều kiện cấp Sổ đỏ theo Luật 2024 không.</li>
+                <li><i class="fas fa-star"></i> **Ước tính sơ bộ** Tiền sử dụng đất phải nộp, giúp bạn chuẩn bị tài chính.</li>
+                <li><i class="fas fa-star"></i> **Lập danh mục** giấy tờ cần bổ sung để chuẩn bị hồ sơ hợp lệ.</li>
+            </ul>
+
+            <a href="tel:[Số điện thoại của bạn]" class="btn btn-lg"><i class="fas fa-phone-alt"></i> GỌI NGAY ĐỂ ĐƯỢC HỖ TRỢ</a>
+            
             <div class="contact-info">
                 <p><i class="fas fa-phone-alt"></i> **Hotline:** <a href="tel:[Số điện thoại của bạn]">[Số điện thoại của bạn]</a></p>
                 <p><i class="fas fa-envelope"></i> **Email:** <a href="mailto:[Địa chỉ Email của bạn]">[Địa chỉ Email của bạn]</a></p>
