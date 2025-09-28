@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoàn Thiện Sổ Đỏ Cho Đất Không Giấy Tờ: Hướng Dẫn Chi Tiết A-Z</title>
+    <!-- Google Fonts: Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome (cho icons, nếu muốn dùng) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        :root {
+            --primary-color: #0056b3; /* Màu xanh đậm */
+            --secondary-color: #007bff; /* Màu xanh sáng hơn */
+            --accent-color: #28a745; /* Màu xanh lá cho nút CTA */
+            --text-color: #333;
+            --light-text-color: #666;
+            --bg-light: #f8f9fa;
+            --bg-dark: #e9ecef;
+            --border-color: #dee2e6;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            font-size: 1.6em;
+            margin-top: 30px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 25px;
+        }
+
+        ul li, ol li {
+            margin-bottom: 8px;
+            color: var(--light-text-color);
+        }
+
+        ul li i, ol li i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+
+        .note {
+            font-style: italic;
+            color: var(--light-text-color);
+            margin-top: 15px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 10px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #218838; /* Darker green */
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-lg {
+            padding: 15px 35px;
+            font-size: 1.2em;
+        }
+
+        /* Header/Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1500x500/0056b3/ffffff?text=Dat+Khong+Giay+To') no-repeat center center/cover;
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-section h1 {
+            color: #fff;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-section .subtitle {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .hero-section p {
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            font-size: 1.1em;
+        }
+
+        .cta-header {
+            margin-top: 40px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid var(--bg-dark);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-reasons {
+            background-color: var(--bg-light);
+            text-align: center;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .section-reasons h2 {
+            border-bottom: none;
+            margin-bottom: 40px;
+        }
+
+        .reason-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .reason-item {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .reason-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .reason-item i {
+            font-size: 3em;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .reason-item h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .update-info {
+            font-size: 1.1em;
+            margin-top: 40px;
+            padding: 15px 20px;
+            background-color: #ffeeba; /* Light yellow for notice */
+            border-left: 5px solid #ffc107; /* Darker yellow */
+            color: #856404;
+            display: inline-block;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+
+        /* Table Styles */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            text-align: left;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        table thead tr {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            text-align: left;
+        }
+
+        table th,
+        table td {
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+        }
+
+        table tbody tr {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        table tbody tr:nth-of-type(even) {
+            background-color: var(--bg-light);
+        }
+
+        table tbody tr:last-of-type {
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        /* Formula Styling */
+        .formula {
+            background-color: var(--bg-light);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed var(--secondary-color);
+            text-align: center;
+            font-size: 1.1em;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Call to Action Section */
+        .section-cta {
+            text-align: center;
+            background-color: var(--bg-dark);
+            padding: 60px 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-cta h2 {
+            border-bottom: none;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: var(--primary-color);
+        }
+
+        .section-cta h3 {
+            color: var(--accent-color);
+            font-size: 2em;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .section-cta .btn {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contact-info p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .contact-info p i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .privacy-note {
+            font-size: 0.9em;
+            color: var(--light-text-color);
+            margin-top: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5em;
+            }
+            .hero-section .subtitle {
+                font-size: 1.2em;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+            h3 {
+                font-size: 1.4em;
+            }
+            .reason-list {
+                grid-template-columns: 1fr;
+            }
+            .section-cta h2 {
+                font-size: 2em;
+            }
+            .section-cta h3 {
+                font-size: 1.6em;
+            }
+            .btn-lg {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 50px 0;
+            }
+            .hero-section h1 {
+                font-size: 2em;
+            }
+            .hero-section .subtitle {
+                font-size: 1em;
+            }
+            .container {
+                padding: 15px;
+            }
+            table th, table td {
+                padding: 8px 10px;
+            }
+            .section-cta h2 {
+                font-size: 1.8em;
+            }
+            .section-cta h3 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-section">
+        <div class="container">
+            <h1>HOÀN THIỆN SỔ ĐỎ CHO ĐẤT KHÔNG GIẤY TỜ: HƯỚNG DẪN CHI TIẾT TỪ A-Z</h1>
+            <p class="subtitle">SỔ ĐỎ CHÍNH CHỦ TRONG TẦM TAY: Hướng Dẫn Toàn Diện Cho Đất Không Giấy Tờ!</p>
+            <p>Bạn đang sở hữu mảnh đất không có giấy tờ hợp pháp và băn khoăn về quy trình cấp Sổ đỏ? Đừng lo lắng! Với những cập nhật mới nhất từ **Luật Đất đai 2024** và **Nghị định 103/2024/NĐ-CP**, việc hợp thức hóa quyền sử dụng đất của bạn giờ đây đã rõ ràng hơn bao giờ hết.</p>
+            <p>Hướng dẫn chi tiết này sẽ giúp bạn nắm vững mọi thông tin cần thiết: từ điều kiện, quy trình, hồ sơ cần chuẩn bị đến cách tính **Tiền sử dụng đất** chính xác, đảm bảo bạn tự tin hoàn tất thủ tục và có được Sổ đỏ chính chủ.</p>
+            <div class="cta-header">
+                <a href="#contact" class="btn btn-primary">LIÊN HỆ TƯ VẤN MIỄN PHÍ NGAY!</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section-reasons">
+            <h2>Lý do bạn nên sở hữu Sổ đỏ cho đất không giấy tờ:</h2>
+            <div class="reason-list">
+                <div class="reason-item">
+                    <i class="fas fa-gavel icon-large"></i>
+                    <h3>An tâm pháp lý</h3>
+                    <p>Đảm bảo quyền sử dụng hợp pháp, tránh tranh chấp.</p>
+                </div>
+                <div class="reason-item">
+                    <i class="fas fa-hand-holding-usd icon-large"></i>
+                    <h3>Giá trị tài sản</h3>
+                    <p>Nâng cao giá trị đất, dễ dàng giao dịch.</p>
+                </div>
+                <div class="reason-item">
+                    <i class="fas fa-university icon-large"></i>
+                    <h3>Thế chấp, vay vốn</h3>
+                    <p>Sử dụng Sổ đỏ làm tài sản đảm bảo vay vốn ngân hàng.</p>
+                </div>
+                <div class="reason-item">
+                    <i class="fas fa-shield-alt icon-large"></i>
+                    <h3>Bảo vệ quyền lợi</h3>
+                    <p>Được bồi thường thỏa đáng khi nhà nước thu hồi đất.</p>
+                </div>
+            </div>
+            <p class="update-info"><strong>Cập nhật mới nhất:</strong> Áp dụng theo **Điều 138 Luật Đất đai 2024** và **Điều 10 Nghị định 103/2024/NĐ-CP**.</p>
+        </section>
+
+        <section class="section-conditions">
+            <h2>I. BẠN CÓ ĐỦ ĐIỀU KIỆN CẤP SỔ ĐỎ KHÔNG? (ĐIỀU 138 LĐĐ 2024)</h2>
+            <p>Cá nhân, hộ gia đình đang sử dụng đất không có bất kỳ giấy tờ nào vẫn có thể được cấp Giấy chứng nhận quyền sử dụng đất (Sổ đỏ) nếu đáp ứng đủ 04 tiêu chí sau:</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> **Sử dụng ổn định:** Đất đã được sử dụng ổn định **trước ngày 01 tháng 7 năm 2014**.</li>
+                <li><i class="fas fa-check-circle"></i> **Không vi phạm:** Tại thời điểm nộp hồ sơ, việc sử dụng đất **không vi phạm** pháp luật về đất đai.</li>
+                <li><i class="fas fa-check-circle"></i> **Không tranh chấp:** Đất **không có tranh chấp** về quyền sử dụng đất.</li>
+                <li><i class="fas fa-check-circle"></i> **Phù hợp quy hoạch:** Phù hợp với quy hoạch sử dụng đất, quy hoạch xây dựng (tùy từng địa phương).</li>
+            </ul>
+            <p class="note"><em>Bạn không chắc chắn về điều kiện? Hãy liên hệ với chúng tôi để được tư vấn miễn phí!</em></p>
+        </section>
+
+        <section class="section-process">
+            <h2>II. QUY TRÌNH 4 BƯỚC THỰC HIỆN THỦ TỤC</h2>
+            <p>Thủ tục này được thực hiện tại **Văn phòng Đăng ký đất đai cấp huyện** hoặc **Bộ phận Một cửa** tại địa phương có đất.</p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Bước thực hiện</th>
+                            <th>Nội dung công việc chính</th>
+                            <th>Cơ quan xử lý</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>**1**</td>
+                            <td>**Nộp Hồ sơ**</td>
+                            <td>Nộp 01 bộ hồ sơ đề nghị cấp Sổ đỏ. Cơ quan tiếp nhận kiểm tra tính hợp lệ và hẹn ngày trả kết quả.</td>
+                            <td>Văn phòng Đăng ký đất đai</td>
+                        </tr>
+                        <tr>
+                            <td>**2**</td>
+                            <td>**Xác minh & Công khai**</td>
+                            <td>Đo đạc, lập bản đồ địa chính, xác minh nguồn gốc và hiện trạng sử dụng đất. **Niêm yết công khai** kết quả tại trụ sở UBND cấp xã và khu dân cư trong **15 ngày** để tiếp nhận ý kiến.</td>
+                            <td>Văn phòng Đăng ký đất đai, UBND cấp xã</td>
+                        </tr>
+                        <tr>
+                            <td>**3**</td>
+                            <td>**Xác định Nghĩa vụ Tài chính**</td>
+                            <td>Văn phòng Đăng ký đất đai gửi hồ sơ sang Cơ quan Thuế. Cơ quan Thuế tính toán **Tiền sử dụng đất** theo **Điều 10 Nghị định 103/2024/NĐ-CP**, Lệ phí trước bạ và gửi **Thông báo nộp tiền**.</td>
+                            <td>Cơ quan Thuế</td>
+                        </tr>
+                        <tr>
+                            <td>**4**</td>
+                            <td>**Cấp Giấy chứng nhận**</td>
+                            <td>Người dân **hoàn thành nghĩa vụ tài chính** theo Thông báo. Sau khi có xác nhận nộp tiền, cơ quan có thẩm quyền ký cấp và Văn phòng Đăng ký đất đai sẽ trao Giấy chứng nhận.</td>
+                            <td>UBND cấp huyện/tỉnh, Văn phòng Đăng ký đất đai</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="note"><em>Mỗi bước đều quan trọng. Chúng tôi sẽ hướng dẫn bạn chi tiết để đảm bảo không sai sót!</em></p>
+        </section>
+
+        <section class="section-documents">
+            <h2>III. HỒ SƠ PHẢI CHUẨN BỊ (01 BỘ)</h2>
+            <p>Để nộp hồ sơ hợp lệ, bạn cần chuẩn bị đầy đủ các giấy tờ sau:</p>
+            <ol>
+                <li><i class="fas fa-file-alt"></i> **Đơn đề nghị** cấp Giấy chứng nhận quyền sử dụng đất (theo mẫu).</li>
+                <li><i class="fas fa-id-card"></i> **Giấy tờ tùy thân:** Bản sao CCCD/CMND của các thành viên trong hộ gia đình và Sổ hộ khẩu.</li>
+                <li><i class="fas fa-folder-open"></i> **Các giấy tờ chứng minh quá trình sử dụng đất ổn định:**
+                    <ul>
+                        <li>Giấy tờ về việc nộp thuế đất, tiền sử dụng đất, hoặc biên lai thu tiền điện, nước, internet...</li>
+                        <li>Giấy tờ giao đất của cơ quan nhà nước, tổ chức được giao quản lý đất đai.</li>
+                        <li>Các giấy tờ về việc mua bán, chuyển nhượng, tặng cho được UBND cấp xã xác nhận.</li>
+                        <li>**Giấy xác nhận của UBND cấp xã** về việc đất không có tranh chấp, sử dụng ổn định và phù hợp quy hoạch.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p class="note"><em>Bạn cần mẫu đơn hoặc hỗ trợ rà soát hồ sơ? Hãy để lại thông tin, chúng tôi sẽ hỗ trợ bạn!</em></p>
+        </section>
+
+        <section class="section-fee-calculation">
+            <h2>IV. BẢNG TÍNH TIỀN SỬ DỤNG ĐẤT CHI TIẾT (ĐIỀU 10 NĐ 103)</h2>
+            <p>Tiền sử dụng đất được tính bằng tỷ lệ phần trăm (%) nhân với **Giá đất quy định tại Bảng giá đất** của UBND cấp tỉnh.</p>
+            <p class="formula"><strong>Công thức chung:</strong> <br> $$\text{Tiền sử dụng đất} = \text{Diện tích phải nộp tiền} \times \text{Giá đất tại Bảng giá đất} \times \text{Tỷ lệ % quy định}$$</p>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mốc thời gian sử dụng đất</th>
+                            <th>Loại đất được công nhận</th>
+                            <th>Tỷ lệ (%) áp dụng</th>
+                            <th>Ghi chú quan trọng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>**Trước 18/12/1980**</td>
+                            <td>Đất ở: Phần **vượt hạn mức**</td>
+                            <td>**20%**</td>
+                            <td>Phần trong hạn mức được **miễn** (0%).</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Đất nông nghiệp chuyển sang Phi nông nghiệp</td>
+                            <td>**30%**</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>**18/12/1980 – 15/10/1993**</td>
+                            <td>Đất ở: Phần **vượt hạn mức**</td>
+                            <td>**40%**</td>
+                            <td>Phần trong hạn mức sẽ áp dụng **50% Giá đất CỤ THỂ** (không phải Bảng giá đất).</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Đất nông nghiệp chuyển sang Phi nông nghiệp</td>
+                            <td>**50%**</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>**15/10/1993 – 01/7/2004**</td>
+                            <td>Đất ở: Phần **trong hạn mức**</td>
+                            <td>**20%**</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Đất ở: Phần **vượt hạn mức**</td>
+                            <td>**50%**</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Đất SKSX phi nông nghiệp/Thương mại, dịch vụ</td>
+                            <td>**60%**</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>**01/7/2004 – 01/7/2014**</td>
+                            <td>Đất ở: Phần **trong hạn mức**</td>
+                            <td>**40%**</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Đất ở: Phần **vượt hạn mức**</td>
+                            <td>**70%**</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Đất SKSX phi nông nghiệp/Thương mại, dịch vụ</td>
+                            <td>**70%**</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Các Nghĩa Vụ Tài Chính Khác Bắt Buộc</h3>
+            <p>Bạn cần nộp thêm 02 khoản sau khi có Thông báo thuế:</p>
+            <ul>
+                <li><i class="fas fa-hand-holding-usd"></i> **Lệ phí trước bạ:** **0,5%** trên giá trị đất.</li>
+                <li><i class="fas fa-file-invoice-dollar"></i> **Lệ phí cấp Giấy chứng nhận:** Mức thu do Hội đồng nhân dân cấp tỉnh quy định.</li>
+            </ul>
+            <p class="note"><em>Muốn ước tính chính xác Tiền sử dụng đất cho trường hợp của bạn?</em></p>
+        </section>
+
+        <section class="section-cta" id="contact">
+            <h2>ĐỪNG ĐỂ ĐẤT KHÔNG GIẤY TỜ LÀM BẠN LO LẮNG!</h2>
+            <p>Hãy để các chuyên gia của chúng tôi hỗ trợ bạn từ A-Z để quá trình cấp Sổ đỏ diễn ra nhanh chóng và thuận lợi nhất.</p>
+            <h3>LIÊN HỆ TƯ VẤN MIỄN PHÍ NGAY HÔM NAY!</h3>
+            <a href="tel:[Số điện thoại của bạn]" class="btn btn-primary btn-lg"><i class="fas fa-phone-alt"></i> GỌI NGAY CHO CHÚNG TÔI</a>
+            <div class="contact-info">
+                <p><i class="fas fa-phone-alt"></i> **Hotline:** <a href="tel:[Số điện thoại của bạn]">[Số điện thoại của bạn]</a></p>
+                <p><i class="fas fa-envelope"></i> **Email:** <a href="mailto:[Địa chỉ Email của bạn]">[Địa chỉ Email của bạn]</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> **Địa chỉ:** [Địa chỉ công ty/văn phòng của bạn]</p>
+            </div>
+            <p class="privacy-note"><em>Chúng tôi cam kết bảo mật thông tin khách hàng.</em></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 [Tên Công ty/Cá nhân của bạn]. Mọi quyền được bảo lưu.</p>
+        </div>
+    </footer>
+</body>
+</html>
